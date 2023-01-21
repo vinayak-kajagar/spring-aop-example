@@ -21,6 +21,9 @@ public class ProductController {
 
     @PostMapping
     public Product addProduct(@RequestBody Product product) {
+//        if(product.getPrice()<=1000){
+//            throw new RuntimeException("Product price shouldn't be less than 1000");
+//        }
         return service.saveProduct(product);
     }
 
@@ -36,7 +39,7 @@ public class ProductController {
 
     @PutMapping("/{id}")
     public Product updateProduct(@PathVariable int id, @RequestBody Product productRequest) {
-       return service.updateProduct(id, productRequest);
+        return service.updateProduct(id, productRequest);
     }
 
     @DeleteMapping("/{id}")
