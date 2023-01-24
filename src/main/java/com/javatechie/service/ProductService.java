@@ -31,7 +31,8 @@ public class ProductService {
     }
 
     public Product getProductById(int id) {
-           return repository.findById(id).get();
+           return repository.findById(id)
+                   .orElseThrow(()->new IllegalArgumentException("product is not available with id "+id));
     }
 
 

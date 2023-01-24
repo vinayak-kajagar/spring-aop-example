@@ -17,7 +17,7 @@ public class MetricsRegistryAdvice {
     @Autowired
     private ObservationRegistry registry;
 
-    @After(value = "execution (* com.javatechie.controller.ProductController.*(..))")
+    //@After(value = "execution (* com.javatechie.controller.ProductController.*(..))")
     public void sendMetrics(JoinPoint joinPoint){
        //logic
         log.info("application collecting metrics");

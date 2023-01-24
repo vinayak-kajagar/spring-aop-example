@@ -18,22 +18,24 @@ public class ProductController {
 
     @Autowired
     private ProductService service;
-
+//before
     @PostMapping
     public Product addProduct(@RequestBody Product product) {
-//        if(product.getPrice()<=1000){
-//            throw new RuntimeException("Product price shouldn't be less than 1000");
-//        }
+        if(product.getPrice()<=100){
+            throw new RuntimeException("Product price shouldn't be less than 100");
+        }
         return service.saveProduct(product);
     }
-
+    //after or after returning
+    //After throwing advice
+  //around advice : before + after returning
     @GetMapping
     public List<Product> getProducts() {
         return service.getProducts();
     }
 
     @GetMapping("/{id}")
-    public Product getProductById(@PathVariable int id) {
+    public Product getProductById(@PathVariable int id) throws Exception {
         return service.getProductById(id);
     }
 
