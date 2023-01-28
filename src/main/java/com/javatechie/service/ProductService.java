@@ -1,5 +1,7 @@
 package com.javatechie.service;
 
+import com.javatechie.annotation.LogRequestAndResponse;
+import com.javatechie.annotation.TrackExecutionTime;
 import com.javatechie.entity.Product;
 import com.javatechie.respository.ProductRepository;
 import lombok.extern.slf4j.Slf4j;
@@ -22,20 +24,24 @@ public class ProductService {
     private ProductRepository repository;
 
 
+    //@LogRequestAndResponse
+    @TrackExecutionTime
     public Product saveProduct(Product product) {
         return repository.save(product);
     }
 
+    @TrackExecutionTime
     public List<Product> getProducts() {
            return repository.findAll();
     }
 
+    //@LogRequestAndResponse
     public Product getProductById(int id) {
            return repository.findById(id)
                    .orElseThrow(()->new IllegalArgumentException("product is not available with id "+id));
     }
 
-
+  @TrackExecutionTime
     public Product updateProduct(int id, Product productRequest) {
         // get the product from DB by id
         // update with new value getting from request
