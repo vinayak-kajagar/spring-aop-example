@@ -1,14 +1,10 @@
-package com.javatechie.controller;
+package com.vinayak.controller;
 
-import com.javatechie.annotation.LogRequestAndResponse;
-import com.javatechie.annotation.TrackExecutionTime;
-import com.javatechie.entity.Product;
-import com.javatechie.service.ProductService;
+import com.vinayak.annotation.TrackExecutionTime;
+import com.vinayak.entity.Product;
+import com.vinayak.service.ProductService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageRequest;
-import org.springframework.data.domain.Sort;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;

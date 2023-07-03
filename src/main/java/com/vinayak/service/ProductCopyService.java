@@ -1,6 +1,6 @@
-package com.javatechie.service;
+package com.vinayak.service;
 
-import com.javatechie.entity.Product;
+import com.vinayak.entity.Product;
 import org.springframework.stereotype.Service;
 
 @Service

@@ -1,4 +1,4 @@
-package com.javatechie.entity;
+package com.vinayak.entity;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

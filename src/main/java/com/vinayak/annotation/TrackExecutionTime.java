@@ -1,4 +1,4 @@
-package com.javatechie.annotation;
+package com.vinayak.annotation;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

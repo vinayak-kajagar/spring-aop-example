@@ -1,4 +1,4 @@
-package com.javatechie.advice;
+package com.vinayak.advice;
 
 import lombok.extern.slf4j.Slf4j;
 import org.aspectj.lang.JoinPoint;
